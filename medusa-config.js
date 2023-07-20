@@ -39,7 +39,12 @@ const plugins = [
   {
     resolve: `@medusajs/file-local`,
     options: {
-      upload_dir: "uploads",
+      s3_url: process.env.S3_URL,
+      bucket: process.env.S3_BUCKET,
+      region: process.env.S3_REGION,
+      access_key_id: process.env.S3_ACCESS_KEY_ID,
+      secret_access_key: process.env.S3_SECRET_ACCESS_KEY,
+      aws_config_option: {},,
     },
   },
   // To enable the admin plugin, uncomment the following lines and run `yarn add @medusajs/admin`
