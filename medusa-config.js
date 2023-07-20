@@ -44,7 +44,7 @@ const plugins = [
       region: process.env.S3_REGION,
       access_key_id: process.env.S3_ACCESS_KEY_ID,
       secret_access_key: process.env.S3_SECRET_ACCESS_KEY,
-      aws_config_option: {},,
+      aws_config_option: {},
     },
   },
   // To enable the admin plugin, uncomment the following lines and run `yarn add @medusajs/admin`
