@@ -40,7 +40,8 @@
     "medusa-payment-manual": "^1.0.23",
     "medusa-payment-stripe": "^6.0.0",
     "medusa-plugin-mailchimp": "^1.1.50",
-    "typeorm": "^0.3.16"
+    "typeorm": "^0.3.16",
+    "medusa-plugin-auth": "^1.6.0",
   },
   "devDependencies": {
     "@babel/cli": "^7.14.3",
