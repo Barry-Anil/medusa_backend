@@ -95,6 +95,42 @@ const plugins = [
                 //    // implement your custom verify callback here if you need it
                 // }
             }
+        },
+	facebook: {
+            clientID: FacebookClientId,
+            clientSecret: FacebookClientSecret,
+ 
+            admin: {
+                callbackUrl:`${BACKEND_URL}/admin/auth/facebook/cb`,
+                failureRedirect: `${ADMIN_URL}/login`,
+ 
+				// The success redirect can be overriden from the client by adding a query param `?redirectTo=your_url` to the auth url
+				// This query param will have the priority over this configuration
+                successRedirect: `${ADMIN_URL}/`,
+ 
+                // authPath: '/admin/auth/facebook',
+                // authCallbackPath: '/admin/auth/facebook/cb',
+                // expiresIn: 24 * 60 * 60 * 1000,
+                // verifyCallback: (container, req, accessToken, refreshToken, profile, strict) => {
+                //    // implement your custom verify callback here if you need it
+                // }
+            },
+ 
+            store: {
+                callbackUrl:`${BACKEND_URL}/store/auth/facebook/cb`,
+                failureRedirect: `${STORE_URL}/login`,
+ 
+				// The success redirect can be overriden from the client by adding a query param `?redirectTo=your_url` to the auth url
+				// This query param will have the priority over this configuration
+                successRedirect: `${STORE_URL}/`,
+ 
+                // authPath: '/store/auth/facebook',
+                // authCallbackPath: '/store/auth/facebook/cb',
+                // expiresIn: 24 * 60 * 60 * 1000,
+                // verifyCallback: (container, req, accessToken, refreshToken, profile, strict) => {
+                //    // implement your custom verify callback here if you need it
+                // }
+            }
         }
     }
 },
